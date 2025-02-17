@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TVFlix">
         <activity
-            android:name=".ui.MainActivity"
+            android:name="br.com.tvflix.presentation.ui.MainActivity"
             android:banner="@drawable/app_icon_your_company"
             android:exported="true"
             android:icon="@drawable/app_icon_your_company"

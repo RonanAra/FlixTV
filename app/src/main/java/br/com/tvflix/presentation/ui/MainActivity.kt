@@ -1,4 +1,4 @@
-package br.com.tvflix.ui
+package br.com.tvflix.presentation.ui
 
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
