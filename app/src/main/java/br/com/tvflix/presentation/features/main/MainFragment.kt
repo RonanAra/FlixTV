@@ -11,6 +11,7 @@ import androidx.leanback.widget.ListRowPresenter
 import br.com.tvflix.R
 import br.com.tvflix.domain.entity.CategoryMovies
 import br.com.tvflix.domain.entity.Movie
+import br.com.tvflix.presentation.features.common.error.ErrorFragment
 import br.com.tvflix.presentation.features.main.adapter.CardPresenterAdapter
 import br.com.tvflix.presentation.features.main.viewmodel.MainUiState
 import br.com.tvflix.presentation.features.main.viewmodel.MainViewModel
@@ -40,7 +41,7 @@ class MainFragment : BrowseSupportFragment() {
     private fun setObservers() {
         viewModel.uiState.observe(viewLifecycleOwner) { state ->
             when (state) {
-                is MainUiState.Error -> {}
+                is MainUiState.Error -> showError(state.message)
                 is MainUiState.Loading -> {}
                 is MainUiState.Success -> setupMovieRows(
                     popularMovies = state.popularMovies,
@@ -81,5 +82,15 @@ class MainFragment : BrowseSupportFragment() {
 
     private fun setView() {
         title = getString(R.string.app_name)
+    }
+
+    private fun showError(message: String) {
+        requireActivity().supportFragmentManager
+            .beginTransaction()
+            .add(
+                R.id.main_activity,
+                ErrorFragment.newInstance(message)
+            )
+            .commit()
     }
 }
