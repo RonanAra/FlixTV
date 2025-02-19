@@ -1,9 +1,9 @@
 package br.com.tvflix.domain.repository
 
-import br.com.tvflix.domain.entity.Movie
+import br.com.tvflix.data.remote.models.MoviesResponse
 
 interface MoviesRepository {
-    suspend fun getPopular(): List<Movie>
-    suspend fun getRecommend(): List<Movie>
-    suspend fun getTopRated(): List<Movie>
+    suspend fun getPopular(): MoviesResponse
+    suspend fun getRecommend(): MoviesResponse
+    suspend fun getTopRated(): MoviesResponse
 }
