@@ -1,4 +1,4 @@
-package br.com.tvflix.presentation.features.main
+package br.com.tvflix.presentation.features.main.adapter
 
 import android.view.ViewGroup
 import androidx.leanback.widget.ImageCardView
