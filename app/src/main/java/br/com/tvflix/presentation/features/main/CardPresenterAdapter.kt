@@ -29,7 +29,7 @@ class CardPresenterAdapter : Presenter() {
     ) : ViewHolder(cardView) {
         fun bind(movie: Movie) = with(cardView) {
             titleText = movie.title
-            contentText = movie.year.toString()
+            contentText = movie.year
             setMainImageDimensions(176, 213)
             isFocusable = true
             isFocusableInTouchMode = true
