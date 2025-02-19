@@ -15,7 +15,8 @@ FlixTV é um aplicativo para Android TV que exibe informações sobre filmes pop
 - **Concorrência**: Coroutines para programação assíncrona
 
 ## 📽️ Demonstração
-![Demonstração]([Screen_recording_20250219_114816.webm](app%2Fsrc%2Fmain%2Fres%2Fvideos%2FScreen_recording_20250219_114816.webm))
+
+![Demonstração do FlixTV](Screenshot_20250219_124357.png)
 
 ## ⚙️ Como Rodar o Projeto
 Para rodar o projeto, siga os passos abaixo:
