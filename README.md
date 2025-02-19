@@ -1,6 +1,6 @@
 # 🎬 FlixTV
 
-FlixTV é um aplicativo Android que exibe informações sobre filmes populares, tendências e detalhes completos dos filmes. O projeto utiliza a API do The Movie Database (TMDb) para obter os dados.
+FlixTV é um aplicativo para Android TV que exibe informações sobre filmes populares, tendências e detalhes completos dos filmes. O projeto utiliza a API do The Movie Database (TMDb) para obter os dados.
 
 ## 📌 Funcionalidades
 - 📺 Catálogo de filmes e séries
@@ -15,7 +15,7 @@ FlixTV é um aplicativo Android que exibe informações sobre filmes populares, 
 - **Concorrência**: Coroutines para programação assíncrona
 
 ## 📽️ Demonstração
-![Demonstração](../Videos/Captures/Screen_recording_20250219_114816.webm)
+![Demonstração]([Screen_recording_20250219_114816.webm](app%2Fsrc%2Fmain%2Fres%2Fvideos%2FScreen_recording_20250219_114816.webm))
 
 ## ⚙️ Como Rodar o Projeto
 Para rodar o projeto, siga os passos abaixo:
@@ -29,7 +29,7 @@ Para rodar o projeto, siga os passos abaixo:
 2. Adicione a chave da API no arquivo `build.gradle` dentro da seção `defaultConfig`:
 
    ```gradle
-   buildConfigField("String", "TMDB_API_KEY", '"SUA_CHAVE_AQUI"')
+   buildConfigField("String", "API_KEY", '"SUA_CHAVE_AQUI"')
    ```
 
 3. Execute o projeto em um emulador ou dispositivo físico.
