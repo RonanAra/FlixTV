@@ -7,12 +7,14 @@ glide = "4.11.0"
 retrofit = "2.9.0"
 daggerHilt = "2.54"
 lifecycle = "2.8.7"
+fragment = "1.8.6"
 okHttpInterceptor = "4.11.0"
 ksp = "2.0.21-1.0.27"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-leanback = { group = "androidx.leanback", name = "leanback", version.ref = "leanback" }
+androidx-fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment" }
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 lifecycle = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
@@ -25,7 +27,7 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit
 [bundles]
 common = [
     "androidx-core-ktx", "androidx-leanback", "glide", "viewmodel", "hilt-android",
-    "gson", "loggingInterceptor", "retrofit", "lifecycle"
+    "gson", "loggingInterceptor", "retrofit", "lifecycle", "androidx-fragment"
 ]
 
 [plugins]
