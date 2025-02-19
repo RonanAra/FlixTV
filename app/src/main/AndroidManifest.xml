@@ -17,6 +17,7 @@
         android:label="@string/app_name"
         android:logo="@drawable/app_icon_your_company"
         android:supportsRtl="true"
+        android:name=".TvFlixApp"
         android:theme="@style/Theme.TVFlix">
         <activity
             android:name="br.com.tvflix.presentation.ui.MainActivity"
