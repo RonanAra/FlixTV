@@ -8,6 +8,7 @@ import androidx.leanback.widget.HeaderItem
 import androidx.leanback.widget.ListRow
 import androidx.leanback.widget.ListRowPresenter
 import br.com.tvflix.R
+import br.com.tvflix.domain.entity.Movie
 
 class MainFragment : BrowseSupportFragment() {
 
@@ -30,7 +31,13 @@ class MainFragment : BrowseSupportFragment() {
             val categoryTitle = "Category $categoryId"
 
             val itemListAdapter = ArrayObjectAdapter(CardPresenterAdapter())
-            itemListAdapter.addAll(0, (1..10).map { "Item $it" })
+            itemListAdapter.addAll(0, (1..10).map {
+                Movie(
+                    title = "Title $it",
+                    year = 2025,
+                    poster = "https://loremflickr.com/176/313/cat?lock=$it"
+                )
+            })
 
             val categoryHeader = HeaderItem(categoryId.toLong(), categoryTitle)
             val categoryRow = ListRow(categoryHeader, itemListAdapter)
