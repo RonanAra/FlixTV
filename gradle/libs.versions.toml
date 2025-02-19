@@ -15,6 +15,7 @@ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 androidx-leanback = { group = "androidx.leanback", name = "leanback", version.ref = "leanback" }
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+lifecycle = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "daggerHilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "daggerHilt" }
 gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
@@ -24,7 +25,7 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit
 [bundles]
 common = [
     "androidx-core-ktx", "androidx-leanback", "glide", "viewmodel", "hilt-android",
-    "gson", "loggingInterceptor", "retrofit"
+    "gson", "loggingInterceptor", "retrofit", "lifecycle"
 ]
 
 [plugins]
