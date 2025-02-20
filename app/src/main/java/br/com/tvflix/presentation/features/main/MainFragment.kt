@@ -1,5 +1,6 @@
 package br.com.tvflix.presentation.features.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
@@ -11,6 +12,7 @@ import androidx.leanback.widget.ListRowPresenter
 import br.com.tvflix.R
 import br.com.tvflix.domain.entity.CategoryMovies
 import br.com.tvflix.domain.entity.Movie
+import br.com.tvflix.presentation.features.common.error.ErrorActivity
 import br.com.tvflix.presentation.features.common.error.ErrorFragment
 import br.com.tvflix.presentation.features.main.adapter.CardPresenterAdapter
 import br.com.tvflix.presentation.features.main.viewmodel.MainUiState
@@ -35,6 +37,10 @@ class MainFragment : BrowseSupportFragment() {
         setView()
         setupAdapter()
         setObservers()
+    }
+
+    override fun onResume() {
+        super.onResume()
         viewModel.loadMovies()
     }
 
@@ -85,12 +91,15 @@ class MainFragment : BrowseSupportFragment() {
     }
 
     private fun showError(message: String) {
-        requireActivity().supportFragmentManager
-            .beginTransaction()
-            .add(
-                R.id.main_activity,
-                ErrorFragment.newInstance(message)
+        val intent = Intent(
+            requireContext(),
+            ErrorActivity::class.java
+        ).apply {
+            putExtra(
+                ErrorFragment.MESSAGE_ARGUMENT,
+                message
             )
-            .commit()
+        }
+        startActivity(intent)
     }
 }

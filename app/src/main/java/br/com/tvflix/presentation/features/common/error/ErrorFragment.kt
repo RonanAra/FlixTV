@@ -33,15 +33,12 @@ class ErrorFragment : ErrorSupportFragment() {
 
     private fun setListeners() {
         buttonClickListener = View.OnClickListener {
-            parentFragmentManager
-                .beginTransaction()
-                .remove(this@ErrorFragment)
-                .commit()
+            requireActivity().finishAfterTransition()
         }
     }
 
     companion object {
-        private const val MESSAGE_ARGUMENT = "message"
+        const val MESSAGE_ARGUMENT = "message"
 
         fun newInstance(message: String) = ErrorFragment().apply {
             arguments = bundleOf(
